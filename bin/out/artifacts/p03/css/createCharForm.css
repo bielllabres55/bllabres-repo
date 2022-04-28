@@ -1,0 +1,36 @@
+table, td, tr, th {
+    border: 1px solid black;
+}
+table {
+    width: 750px;
+}
+table th:first-child {
+    width: 200px;
+    height: 350px;
+}
+caption {
+    font-weight: bold;
+}
+#race-img {
+    max-height: 300px;
+    width: 150px;
+}
+hr {
+    float: left;
+    height: 10px;
+}
+
+input[type="range"] {
+    display: none;
+}
+
+#pv {
+    color: red;
+    background-color: red;
+    width: 100%;
+}
+#pm {
+    color: blue;
+    background-color: blue;
+    width: 100%;
+}

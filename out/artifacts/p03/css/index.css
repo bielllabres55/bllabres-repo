@@ -1,0 +1,30 @@
+h1 {
+    margin: 15vh 0 10vh;
+    text-align: center;
+}
+
+main {
+    width: 60%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+main a {
+    color: white;
+    text-decoration: none;
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: all .15s ease-in-out;
+    border: 2px solid black;
+    grid-row: 1;
+}
+
+main a:hover {
+    background-color: white;
+    color: black;
+}

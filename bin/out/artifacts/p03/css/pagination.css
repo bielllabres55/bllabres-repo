@@ -1,0 +1,49 @@
+.card-list {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-row-gap: 25px;
+    justify-items: center;
+    margin: 0 auto;
+}
+
+.card {
+    width: 75%;
+    border: 1px solid black;
+    display: grid;
+    justify-items: center;
+}
+
+.card .img-container {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.card img {
+    max-height: 300px;
+}
+
+.card .character-stats {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-items: center;
+}
+
+.card .name {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+.card p {
+    margin: 5px auto;
+}
