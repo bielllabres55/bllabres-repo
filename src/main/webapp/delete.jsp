@@ -6,7 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%// variables per fer la connexio:
+<%
     String user="m8";
     String password="toor";
     String host="192.111.0.100";
