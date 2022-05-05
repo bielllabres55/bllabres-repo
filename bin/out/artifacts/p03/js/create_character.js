@@ -122,7 +122,6 @@ window.onload = () => {
         pmInput.value = pm;
         pmHR.parentElement.parentElement.childNodes[1].innerHTML = "P.M ("+ pm +")";;
         pmHR.style.width = (pm * 3) + "px";
-
     }
 
     let stats = ["str", "dex", "con", "int", "sab", "car"];
@@ -138,7 +137,6 @@ window.onload = () => {
         let opt = document.createElement("option");
         opt.setAttribute("value", index.toString());
         opt.innerHTML = race;
-
         raceSelect.appendChild(opt);
     });
 
@@ -155,7 +153,7 @@ window.onload = () => {
     let values = []
     for (let i = 0; i < 6; i++) values.push(throwAttributeDice());
 
-    let valorsP = document.querySelector("h1 + p");
+    let valorsP = document.querySelector("p.values");
     valorsP.innerHTML = "Valors generats:" + valuesToString(values);
     setSelectValues(values);
 

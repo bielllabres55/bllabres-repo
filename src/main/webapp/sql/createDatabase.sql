@@ -2,6 +2,13 @@ drop database if exists rpg;
 create database rpg charset utf8;
 use rpg;
 
+create table `User` (
+	id int not null auto_increment,
+	name varchar(100) not null,
+	password varchar(100) not null,
+	primary key (id)
+);
+
 create table Carta (
     id int not null auto_increment,
     name varchar(50) not null,
@@ -20,5 +27,7 @@ create table Carta (
     modCar int not null,
     pv int not null,
     pm int not null,
-    primary key (id)
+    user_id int not null,
+    primary key (id),
+    foreign key (user_id) references `User`(id)
 );

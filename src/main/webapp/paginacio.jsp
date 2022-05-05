@@ -73,7 +73,10 @@
 		num_registres = conn.createStatement();
 		//inmediatamente hacemos una consulta sencilla
 		//creamos la consulta
+		String user_id=request.getParameter("user");
+		
 		num_reg = num_registres.executeQuery("SELECT * FROM Carta");
+				
 		int num_total_registros=0;
 		while(num_reg.next()) {
 			num_total_registros++;
@@ -109,7 +112,7 @@
 			statement = conn.createStatement();
 			//inmediatamente hacemos una consulta sencilla
 			//creamos la consulta
-			String sentence="SELECT * from Carta limit "+inicio+","+TAMANO_PAGINA;
+			String sentence="SELECT * from Carta where user_id = " + user_id +" limit "+inicio+","+TAMANO_PAGINA;
 			rs = statement.executeQuery(sentence);
 			//leemos la consulta
 

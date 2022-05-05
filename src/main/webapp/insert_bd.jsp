@@ -42,6 +42,8 @@
 	int npv=Integer.parseInt(pv);
 	String pm=request.getParameter("pm");
 	int npm=Integer.parseInt(pm);
+	String user_id=request.getParameter("user");
+	int nuser=Integer.parseInt(user_id);
 
     Character aux = new Character();
     aux.setRace(raceId);
@@ -52,7 +54,7 @@
        statement = conn.createStatement();
        //inmediatamente hacemos un insert amb les dades
        //creamos la consulta
-       int i=statement.executeUpdate("insert into Carta values(null,'"+nom+"','"+raceId+"',"+nfue+","+aux.getModStr()+","+ndes+","+aux.getModDex()+","+ncon+","+aux.getModCon()+","+nint+","+aux.getModIntel()+","+sab+","+aux.getModSab()+","+car+","+aux.getModCar()+","+pv+","+pm+")");
+       int i=statement.executeUpdate("insert into Carta values(null,'"+nom+"','"+raceId+"',"+nfue+","+aux.getModStr()+","+ndes+","+aux.getModDex()+","+ncon+","+aux.getModCon()+","+nint+","+aux.getModIntel()+","+sab+","+aux.getModSab()+","+car+","+aux.getModCar()+","+pv+","+pm+","+nuser+")");
        System.out.println("Data successfully inserted!");
        response.sendRedirect("./index.jsp");
     }catch(SQLException error) {

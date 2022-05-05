@@ -1,10 +1,47 @@
+h1 {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.page-info {
+    margin-left: 24px;
+}
+
+.page-nav {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-nav > * {
+    display: inline-block;
+    margin-right: 2em;
+    text-decoration: none;
+    padding: .7em 1em;
+    border-radius: 10px;
+    border: 1px solid black;
+    color: black;
+    transition: all .2s ease-in-out;
+    cursor: default;
+}
+
+.page-nav > p {
+    border-color: dimgray;
+    color: dimgray;
+}
+
+.page-nav > a:hover {
+    color: white;
+    background: black;
+    cursor: pointer;
+}
+
 .card-list {
     width: 80%;
     display: grid;
     grid-template-columns: repeat(2, 50%);
     grid-row-gap: 25px;
     justify-items: center;
-    margin: 0 auto;
+    margin: 0 auto 30px;
 }
 
 .card {
@@ -12,6 +49,12 @@
     border: 1px solid black;
     display: grid;
     justify-items: center;
+}
+
+@media (min-width: 1200px) {
+    .card {
+        width: 50%;
+    }
 }
 
 .card .img-container {
@@ -34,16 +77,50 @@
     justify-items: center;
 }
 
-.card .name {
+.card .header {
     font-size: 22px;
     font-weight: bold;
     margin: 0;
-    padding: 10px 0;
     width: 100%;
     text-align: center;
+    padding: 10px 0;
     border-bottom: 1px solid black;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    justify-items: center;
+    align-items: center;
+}
+
+.card .header p {
+    grid-column: 2;
+}
+
+.card .header a {
+    font-weight: normal;
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.card .header a > i {
+    color: black;
+    font-size: 1em;
+    transition: font-size .2s ease-in-out;
+}
+
+.card .header a:hover > i {
+    font-size: 1.2em;
+}
+
+.card .header a:last-child {
+    left: 10px;
+    right: unset;
+    grid-column: 1;
 }
 
 .card p {
     margin: 5px auto;
+}
+
+.card .character-stats {
+    margin-bottom: 25px;
 }
