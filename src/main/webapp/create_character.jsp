@@ -49,6 +49,10 @@
             </div>
             <input hidden name="pv" type="range" min="0" id="pvInput">
             <input hidden name="pm" type="range" min="0" id="pmInput">
+            <%
+            String user_id=request.getParameter("user");
+            %>
+            <input hidden name="user" type="text" value="<%= user_id %>" />
             <button class="btn btn-outline-dark" disabled type="submit">Guardar personatge!</button>
         </form>
         <table id="character">

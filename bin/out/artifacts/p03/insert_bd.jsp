@@ -53,7 +53,7 @@
        //inmediatamente hacemos un insert amb les dades
        //creamos la consulta
        int i=statement.executeUpdate("insert into Carta values(null,'"+nom+"','"+raceId+"',"+nfue+","+aux.getModStr()+","+ndes+","+aux.getModDex()+","+ncon+","+aux.getModCon()+","+nint+","+aux.getModIntel()+","+sab+","+aux.getModSab()+","+car+","+aux.getModCar()+","+pv+","+pm+")");
-       System.out.println("Data is successfully inserted!");
+       System.out.println("Data successfully inserted!");
        response.sendRedirect("./index.jsp");
     }catch(SQLException error) {
        System.out.print("Error de Conexión : "+error.toString());
